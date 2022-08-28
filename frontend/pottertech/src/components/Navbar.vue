@@ -1,24 +1,13 @@
 <template>
-  <div class="m-0 p-0 bg-primary navbar row">
-    <div class="col-3">
-        test
+  <div class="m-0 p-0 navbar">
+    <div class="left m-3">
+      logo
     </div>
-    <div class="col-9 d-flex align-items-center justify-content-around text-center row">
-        <div class="col-2 font-weight-bold">
-            <a href="#">About</a>
-        </div>
-        <div class="col-2 font-weight-bold">
-            <a href="#">Services</a>
-        </div>
-        <div class="col-2 font-weight-bold">
-            <a href="#">Referee program</a>
-        </div>
-        <div class="col-2 nav-button font-weight-bold">
-            <a href="#">Contact</a>
-        </div>
+    <div class="nav-buttons right m-3">
+      <button class="hover-text">Services</button>
+      <button class="hover-text">Referee program</button>
+      <button class="nav-button">Contact</button>
     </div>
-
-    <!-- <div style="margin: 2vh 4vw">aici vine logo-ul</div> -->
   </div>
   
 </template>
@@ -35,56 +24,70 @@ export default {
 </script>
 
 <style scoped>
+.navText{
+
+  border: none;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.nav-buttons{
+  font-size: 1.1vw;
+  width: 50vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.hover-text, .nav-button{
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  color: white;
+}
+.hover-text {
+  display: inline-block;
+  position: relative;
+}
+.hover-text:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color3);
+  transform-origin: bottom right;
+  transition: transform 0.45s ease-out;
+}
+
+.hover-text:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 a{
     text-decoration: none;
     color: black
 }
 .navbar{
-    height: 100px;
-}
-.nav-button{
-    
-    
-    
-}
-.nav-button a{
-    color: rgb(192, 89, 192);
+    height: 110px;
+    background-color: var(--color1);
+    background-image: linear-gradient(var(--color1), var(--color3));
 }
 .nav-button {
-  position: relative;
-  display: inline-block;
-  padding: 15px 10px;
-  /* width: 100px;
-  height: 100px; */
-  background-color: bisque;
+  padding: 14px 25px;
+  background-color: var(--color3) !important;
   border-radius: 50px;
-  box-shadow: 0 15px 2px rgba(202, 118, 118, 0.1);
+  box-shadow: 0 6px 10px var(--color1);
   border-radius: 50px;
-  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  font-weight: bold !important;
+  color: var(--color4) !important;
+  transition: all 0.6s linear;
 }
-
-.nav-button::after {
-  content: "";
-  border-radius: 5px;
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  box-shadow: 50 5px 50px rgba(0, 0, 0, 0.445);
-  opacity: 0;
-  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
 .nav-button:hover {
-  -webkit-transform: scale(1.25, 1.25);
-  transform: scale(1.1, 1.1);
-}
-
-.nav-button:hover::after {
-    opacity: 1;
+  transform: scale(1.04, 1.04);
 }
 </style>

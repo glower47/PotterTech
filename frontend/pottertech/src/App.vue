@@ -14,7 +14,17 @@ export default {
 </script>
 
 <style>
+:root {
+  --color1: #08418B;
+  --color2: #64C3ED;
+  --color3: #C6EFF9;
+  --color4: #3F7392;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--color3);
+  height: 100vh;
+  overflow: hidden;
 }
 </style>
