@@ -24,7 +24,27 @@ export default {
 #app {
   font-family: 'Roboto', sans-serif;
   background-color: var(--color3);
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--color3); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background: var(--color1); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color2);
 }
 </style>

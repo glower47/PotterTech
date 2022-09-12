@@ -1,7 +1,7 @@
 <template>
   <div class="m-0 p-0 navbar">
     <div class="left m-3">
-      logo
+      <img class="logo" src="../assets/logo.jpeg" alt="">
     </div>
     <div class="nav-buttons right m-3">
       <button class="hover-text">Services</button>
@@ -33,6 +33,7 @@ export default {
 }
 
 .nav-buttons{
+  opacity: 100% !important;
   font-size: 1.1vw;
   width: 50vw;
   display: flex;
@@ -59,7 +60,7 @@ export default {
   height: 4px;
   bottom: 0;
   left: 0;
-  background-color: var(--color3);
+  background-color: var(--color1);
   transform-origin: bottom right;
   transition: transform 0.45s ease-out;
 }
@@ -74,8 +75,9 @@ a{
 }
 .navbar{
     height: 110px;
-    background-color: var(--color1);
-    background-image: linear-gradient(var(--color1), var(--color3));
+    /* background-color: var(--color1); */
+    /* background-image: linear-gradient(var(--color1), var(--color3)); */
+    /* opacity: 50%; */
 }
 .nav-button {
   padding: 14px 25px;
@@ -89,5 +91,10 @@ a{
 }
 .nav-button:hover {
   transform: scale(1.04, 1.04);
+}
+
+.logo {
+  background: transparent;
+  height: 100px;
 }
 </style>
