@@ -33,7 +33,7 @@ export default {
 }
 
 .nav-buttons{
-  opacity: 100% !important;
+  /* opacity: 100% !important; */
   font-size: 1.1vw;
   width: 50vw;
   display: flex;
