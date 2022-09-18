@@ -24,19 +24,20 @@ export default {
 }
 
 .title {
-  font-size: 60px;
+  font-size: 2.5rem;
   font-weight: 700;
   letter-spacing: 3px;
   
 }
 
 .main-text { 
-  margin: 0px 200px;
-  margin-right: 700px;
-  color: var(--color1);
+  margin-left: 100px;
+  width: 40%;
+  color: white;
 }
 .description{ 
   font-weight: 600;
-  font-size: 27px;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
 }
 </style>

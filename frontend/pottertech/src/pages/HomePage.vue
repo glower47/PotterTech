@@ -6,7 +6,7 @@
         xmlns:xlink="http://www.w3.org/1999/xlink"
         style="
           margin: auto;
-          background: #c6eff9;
+          background: linear-gradient(var(--color1) 50%, var(--color3));
           display: block;
           z-index: 1;
           position: relative;

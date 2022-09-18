@@ -15,17 +15,17 @@ export default {
 
 <style>
 :root {
-  --color1: #08418B;
+  --color1: #023A68;
   --color2: #64C3ED;
   --color3: #C6EFF9;
-  --color4: #3F7392;
+  --color4: #024F8E;
 }
 
 #app {
   font-family: 'Roboto', sans-serif;
   background-color: var(--color3);
   height: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 ::-webkit-scrollbar {

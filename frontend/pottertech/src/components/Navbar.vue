@@ -1,12 +1,12 @@
 <template>
-  <div class="m-0 p-0 navbar">
-    <div class="left m-3">
-      <img class="logo" src="../assets/logo.jpeg" alt="">
+  <div class="m-0 p-0 navbar" id="navbar">
+    <div class="logo-container left">
+      <img class="logo" src="../assets/logoPotterTech.svg" alt="">
     </div>
-    <div class="nav-buttons right m-3">
+    <div class="nav-buttons right">
       <button class="hover-text">Services</button>
       <button class="hover-text">Referee program</button>
-      <button class="nav-button">Contact</button>
+      <button class="nav-button" id="nav-button">Contact</button>
     </div>
   </div>
   
@@ -21,7 +21,28 @@ export default {
   components: {
   }
 }
+
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("navbar").style.height = "60px";
+    document.getElementById("navbar").style.background = "var(--color1)";
+    document.getElementById("navbar").style.boxShadow = "0px 11px 22px -9px var(--color1)";
+    document.getElementById("nav-button").classList.remove("nav-button");
+    document.getElementById("nav-button").classList.add("hover-text");
+    // document.getElementById("hover-text").style.setProperty("--color2", "--color1");
+
+  } else {
+    document.getElementById("navbar").style.height = "100px";
+    document.getElementById("navbar").style.background = "initial";
+    document.getElementById("navbar").style.boxShadow = "none";
+    document.getElementById("nav-button").classList.add("nav-button");
+    document.getElementById("nav-button").classList.remove("hover-text");
+    // document.getElementById("hover-text").style.setProperty("--color1", "--color2");
+  }
+}
 </script>
+
 
 <style scoped>
 .navText{
@@ -35,7 +56,7 @@ export default {
 .nav-buttons{
   /* opacity: 100% !important; */
   font-size: 1.1vw;
-  width: 50vw;
+  width: 45%;
   display: flex;
   justify-content: space-evenly;
 }
@@ -60,41 +81,55 @@ export default {
   height: 4px;
   bottom: 0;
   left: 0;
-  background-color: var(--color1);
-  transform-origin: bottom right;
+  background-color: var(--color3);
+  transform-origin: bottom 50%;
   transition: transform 0.45s ease-out;
 }
 
 .hover-text:hover:after {
   transform: scaleX(1);
-  transform-origin: bottom left;
+  transform-origin: bottom 50%;
 }
 a{
     text-decoration: none;
     color: black
 }
 .navbar{
-    height: 110px;
+    height: 100px;
+    /* display: flex; */
+    position: sticky;
+    transition: 0.4s;
+    top: 0px;
+    z-index: 99;
     /* background-color: var(--color1); */
     /* background-image: linear-gradient(var(--color1), var(--color3)); */
     /* opacity: 50%; */
 }
+/* .navbar {
+  top: 30px;
+} */
 .nav-button {
   padding: 14px 25px;
-  background-color: var(--color3) !important;
+  background-color: var(--color3);
   border-radius: 50px;
-  box-shadow: 0 6px 10px var(--color1);
+  box-shadow: 0px 0px 10px var(--color4);
   border-radius: 50px;
   font-weight: bold !important;
-  color: var(--color4) !important;
-  transition: all 0.6s linear;
+  color: var(--color1);
+  transition: all 0.35s linear;
 }
 .nav-button:hover {
-  transform: scale(1.04, 1.04);
+  transform: scale(1.06, 1.06);
 }
 
 .logo {
   background: transparent;
-  height: 100px;
+  height: 100%;
+  margin: 0px 10px;
+  width: 100%;
+}
+.logo-container {
+  height: 80%;
+  /* margin: 0px 10px; */
 }
 </style>
