@@ -1,12 +1,12 @@
 <template>
-  <div class="m-0 p-0 h-100 w-100">
+  <div class="p-0 h-100 w-100">
     <div class="svg">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"
         style="
           margin: auto;
-          background: linear-gradient(var(--color1) 50%, var(--color3));
+          background: linear-gradient(var(--color1) 30%, whitesmoke);
           display: block;
           z-index: 1;
           position: relative;
@@ -90,7 +90,7 @@
             </path>
           </g>
           <g
-            transform="translate(3255.1528462567867,-2168.6528462567862) scale(90)"
+            transform="translate(3255.1528462567867,-2168.6528462567862) scale(80)"
             opacity="0.37"
           >
             <path
@@ -135,10 +135,15 @@ export default {
 </script>
 
 <style>
+.main-container {
+  max-width: 1197px;
+  margin: auto;
+}
 .svg {
-  width: 100%;
-  height: 700px;
+  /* width: 100%; */
+  height: 750px;
   z-index: 0;
   position: absolute;
+  margin: 0px !important;
 }
 </style>

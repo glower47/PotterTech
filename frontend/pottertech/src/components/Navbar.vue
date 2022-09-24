@@ -1,10 +1,10 @@
 <template>
-  <div class="m-0 p-0 navbar" id="navbar">
+  <div class="navbar" id="navbar">
     <div class="logo-container left">
       <img class="logo" src="../assets/logoPotterTech.svg" alt="">
     </div>
     <div class="nav-buttons right">
-      <button class="hover-text">Services</button>
+      <button class="hover-text">Policy</button>
       <button class="hover-text">Referee program</button>
       <button class="nav-button" id="nav-button">Contact</button>
     </div>
@@ -30,7 +30,10 @@ function scrollFunction() {
     document.getElementById("navbar").style.boxShadow = "0px 11px 22px -9px var(--color1)";
     document.getElementById("nav-button").classList.remove("nav-button");
     document.getElementById("nav-button").classList.add("hover-text");
-    // document.getElementById("hover-text").style.setProperty("--color2", "--color1");
+    document.getElementById("navbar").style.borderBottomRightRadius = "20px";
+    document.getElementById("navbar").style.borderBottomLeftRadius = "20px";
+    // document.getElementById("navbar").style.maxWidth = "inherit";
+
 
   } else {
     document.getElementById("navbar").style.height = "100px";
@@ -38,6 +41,7 @@ function scrollFunction() {
     document.getElementById("navbar").style.boxShadow = "none";
     document.getElementById("nav-button").classList.add("nav-button");
     document.getElementById("nav-button").classList.remove("hover-text");
+    // document.getElementById("navbar").style.maxWidth = "1324px";
     // document.getElementById("hover-text").style.setProperty("--color1", "--color2");
   }
 }
@@ -58,7 +62,7 @@ function scrollFunction() {
   font-size: 1.1vw;
   width: 45%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .hover-text, .nav-button{
@@ -101,6 +105,9 @@ a{
     transition: 0.4s;
     top: 0px;
     z-index: 99;
+    width: 100% !important;
+    max-width: 1324px;
+    margin: auto;
     /* background-color: var(--color1); */
     /* background-image: linear-gradient(var(--color1), var(--color3)); */
     /* opacity: 50%; */
@@ -125,7 +132,7 @@ a{
 .logo {
   background: transparent;
   height: 100%;
-  margin: 0px 10px;
+  /* margin: 0px 10px; */
   width: 100%;
 }
 .logo-container {

@@ -21,9 +21,19 @@ export default {
   --color4: #024F8E;
 }
 
+@font-face {
+    font-family: "myFontLight";
+    src: url("./assets/Roboto-Light.ttf");
+}
+
+@font-face {
+    font-family: "myFontBold";
+    src: url("./assets/Roboto-Bold.ttf");
+}
+
 #app {
-  font-family: 'Roboto', sans-serif;
-  background-color: var(--color3);
+  font-family: "myFontLight";
+  background-color: whitesmoke;
   height: 100%;
   /* overflow: hidden; */
 }
