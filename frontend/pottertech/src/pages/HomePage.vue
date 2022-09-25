@@ -140,7 +140,7 @@ export default {
   margin: auto;
 }
 .svg {
-  /* width: 100%; */
+  width: 100%;
   height: 750px;
   z-index: 0;
   position: absolute;

@@ -6,7 +6,7 @@ let client = new ftp.Client()
 
 
 let local_base_dir = './dist'
-var base_dir       = '/'
+var base_dir       = '/Dev'
 
 client.ftp.verbose = false
 

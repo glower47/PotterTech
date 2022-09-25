@@ -59,7 +59,7 @@ function scrollFunction() {
 
 .nav-buttons{
   /* opacity: 100% !important; */
-  font-size: 1.1vw;
+  font-size: 15px;
   width: 45%;
   display: flex;
   justify-content: space-between;
@@ -102,7 +102,7 @@ a{
     height: 100px;
     /* display: flex; */
     position: sticky;
-    transition: 0.4s;
+    transition: 0.8s;
     top: 0px;
     z-index: 99;
     width: 100% !important;
