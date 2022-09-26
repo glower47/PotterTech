@@ -11,13 +11,15 @@
       </p>
       <button class="nav-button" id="nav-button">Tell us your idea</button>
     </div>
+
     <div class="text-center second-text reveal">
-      <div class="title" style="color: var(--color1)">
-        <span style="color: var(--color4)"><strong>Build</strong></span> &
-        <span style="color: var(--color4)"><strong>Scale</strong></span> your
+      <div class="title coloured-1">
+        <span class="coloured-4"><strong>Build</strong></span> &
+        <span class="coloured-4"><strong>Scale</strong></span> your
         business with us!
       </div>
     </div>
+    
     <div class="services-container">
       <div class="service-box reveal">
         <div class="icon-right">
@@ -398,8 +400,6 @@ function reveal() {
     var elementVisible = 30;
     if (elementTop <= windowHeight - elementVisible) {
       reveals[i].classList.add("active");
-    } else {
-      // reveals[i].classList.remove("active");
     }
   }
 }
@@ -410,16 +410,24 @@ window.addEventListener("scroll", reveal);
 <style>
 .content {
   height: 100%;
-  /* margin: 70px 50px; */
-  max-width: 1324px;
+  width: 90%;
+  max-width: 1200px;
+  box-sizing: border-box;
   margin: auto;
   position: relative;
   z-index: 1;
 }
 
+.coloured-1 {
+  color: var(--color1);
+}
+
+.coloured-4 {
+  color: var(--color4);
+}
+
 .title {
   font-size: 2.5rem;
-  /* font-weight: 600; */
   letter-spacing: 2px;
   line-height: 1.1;
   margin: 0px;
@@ -427,13 +435,13 @@ window.addEventListener("scroll", reveal);
 
 .main-text {
   margin-top: 100px;
-  margin-left: 100px;
-  width: 40%;
-  color: whitesmoke;
-  line-height: 1.3;
+  color: var(--color3);
+  line-height: 1.2;
+  padding: 0px 48px;
+  box-sizing: border-box;
+  width: 48%;
 }
 .description {
-  /* font-weight: 100; */
   font-size: 1rem;
   letter-spacing: 2px;
   margin: 20px 0px;
@@ -460,10 +468,12 @@ window.addEventListener("scroll", reveal);
   transform: scale(1.06, 1.06);
 }
 .services-container {
-  margin: 50px 0px;
+  margin: 50px 24px;
   height: 100%;
   display: flex;
-  justify-content: space-between;
+  gap: 12px;
+
+  justify-content: center;
 }
 .service-box {
   width: 30%;
@@ -584,9 +594,13 @@ window.addEventListener("scroll", reveal);
   color: black;
 }
 
-@media only screen and (max-width: 1126px) {
+@media only screen and (max-width: 900px) {
+  .content {
+    width: 90%;
+  }
   .main-text {
     margin: 50px 0px;
+    padding: 0px;
     width: 100%;
     text-align: center;
   }
