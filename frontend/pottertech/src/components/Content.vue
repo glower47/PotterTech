@@ -452,7 +452,7 @@
   }
 
   .service-box:hover {
-    box-shadow: 0px 6px 20px 3px var(--color2);
+    box-shadow: 0 6px 10px 0px var(--color2);
     transform: translateY(-4%) !important;
   }
 
