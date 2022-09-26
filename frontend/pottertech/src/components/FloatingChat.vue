@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <div class="dialog-center-point">
+    <div class="dialog-center-point" :class="{'show-dialog': showChat}">
         <div class="dialog-content" :class="{'show-dialog': showChat}">
             hello, cu ce te putem ajuta?
         </div>
@@ -130,13 +130,14 @@
         height: 0px;
         top: 50%;
         right: 50%;
+        z-index: 0;
         background-color: black;
-        z-index: 100;
     }
 
     .dialog-center-point .dialog-content {
         display: block;
         opacity: 0;
+        position: relative;
         height: 300px;
         width: 300px;
         margin-left: -150px;
@@ -147,8 +148,11 @@
         box-sizing: border-box;
         border-radius: 4px;
         transform: translateY(20px);
-        opacity: 0;
         transition: 0.5s all ease;
+    }
+
+    .show-dialog { 
+        z-index: 2;
     }
 
     .dialog-center-point .show-dialog {
