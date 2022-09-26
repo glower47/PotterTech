@@ -114,36 +114,39 @@
     <NavbarVue />
     <ContentVue />
     <FooterVue />
+    <FloatingChatVue />
   </div>
 </template>
 
 <script>
-import BasePageVue from "../components/BasePage.vue";
-import NavbarVue from "../components/Navbar.vue";
-import ContentVue from "../components/Content.vue";
-import FooterVue from "../components/Footer.vue";
+  import BasePageVue from "../components/BasePage.vue";
+  import NavbarVue from "../components/Navbar.vue";
+  import ContentVue from "../components/Content.vue";
+  import FooterVue from "../components/Footer.vue";
+  import FloatingChatVue from "../components/FloatingChat.vue";
 
-export default {
-  name: "HomePage",
-  extends: BasePageVue,
-  components: {
-    NavbarVue,
-    ContentVue,
-    FooterVue,
-  },
-};
+  export default {
+    name: "HomePage",
+    extends: BasePageVue,
+    components: {
+      NavbarVue,
+      ContentVue,
+      FooterVue,
+      FloatingChatVue
+    },
+  };
 </script>
 
 <style>
-.main-container {
-  max-width: 1197px;
-  margin: auto;
-}
-.svg {
-  width: 100%;
-  height: 750px;
-  z-index: 0;
-  position: absolute;
-  margin: 0px !important;
-}
+  .main-container {
+    max-width: 1197px;
+    margin: auto;
+  }
+  .svg {
+    width: 100%;
+    height: 750px;
+    z-index: 0;
+    position: absolute;
+    margin: 0px !important;
+  }
 </style>
