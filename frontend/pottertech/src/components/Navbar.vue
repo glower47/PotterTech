@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar" :class="{'navbar-scrolled': scrolled }" id="navbar">
+  <div class="navbar" :class="{'navbar-scrolled': scrolled, 'less-radius': menuExtended }" id="navbar">
     <div class="logo-container left">
       <img class="logo" src="../assets/logoPotterTech.svg" alt="">
     </div>
@@ -12,7 +12,7 @@
       </svg>
     </button>
 
-    <div class="nav-buttons dorpdown-content right"  :class="{'dropdown-content-active': menuExtended}">
+    <div class="nav-buttons dorpdown-content right" :class="{'dropdown-content-active': menuExtended, 'translate-on-scroll': scrolled}">
       <button class="hover-text">Referee program</button>
       <button class="hover-text">Our policy</button>
       <button :class="[ (menuExtended || scrolled) ? 'hover-text': 'nav-button' ]" id="nav-button">Contact</button>
@@ -22,37 +22,35 @@
 </template>
 
 <script>
-import BasePageVue from '../components/BasePage.vue';
+  import BasePageVue from '../components/BasePage.vue';
 
-export default {
-  name: 'Navbar',
-  extends: BasePageVue,
-  components: {
-  }, 
-  data() {
-    return {
-      menuExtended: false,
-      scrolled: false
-    }
-  },
-  methods: {
-    navButtonClick: function() {
-      this.menuExtended = !this.menuExtended;
+  export default {
+    name: 'Navbar',
+    extends: BasePageVue,
+    components: {
+    }, 
+    data() {
+      return {
+        menuExtended: false,
+        scrolled: false
+      }
     },
-    scrollChecker: function() {
-      if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80)
-        this.scrolled = true;
-      else 
-        this.scrolled = false;
+    methods: {
+      navButtonClick: function() {
+        this.menuExtended = !this.menuExtended;
+      },
+      scrollChecker: function() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80)
+          this.scrolled = true;
+        else 
+          this.scrolled = false;
+      },
+      
     },
-    
-  },
-  mounted() {
-    window.addEventListener('scroll', this.scrollChecker);
-  },
-
-};
-
+    mounted() {
+      window.addEventListener('scroll', this.scrollChecker);
+    },
+  };
 </script>
 
 <style scoped>
@@ -100,10 +98,12 @@ export default {
     transform: scaleX(1);
     transform-origin: bottom 50%;
   }
+
   a {
     text-decoration: none;
     color: black
   }
+
   .navbar {
       height: 100px;
       width: 90%;
@@ -151,9 +151,13 @@ export default {
 
   .menu-button {
     background-color: transparent;
+    position: relative;
+    z-index: 100;
     border: none;
     cursor: pointer;
     padding: 0;
+    border-radius: 4px;
+    transition-duration: 0.5s;
   }
 
   .line {
@@ -179,6 +183,16 @@ export default {
     stroke-width: 6;
   }
 
+  .opened {
+    border-radius: 50%;
+    background-color: var(--color1);
+    box-shadow: 0 14px 35px 0 rgba(9,9,12,0.4);
+  }
+
+  .navbar-scrolled .opened {
+    box-shadow: unset;
+  }
+
   .opened .line1 {
     stroke-dasharray: 90 207;
     stroke-dashoffset: -134;
@@ -202,7 +216,7 @@ export default {
   }
 
   .navbar-scrolled {
-    transition-duration: .5s;
+    transition: all 200ms linear;
     height: 64px;
     background: var(--color1);
     box-shadow: 0px 11px 22px -9px var(--color1);
@@ -220,7 +234,7 @@ export default {
       position: absolute;
       padding: 5px;
       background-color: var(--color1);
-      top: 64px;
+      top: 84px;
       left: 0;
       z-index: 2;
       opacity: 0;
@@ -228,23 +242,12 @@ export default {
       border-radius: 4px;
       box-shadow: 0 14px 35px 0 rgba(9,9,12,0.4);
       pointer-events: none;
-      transform: translateY(20px);
+      transform: translateY(32px);
       transition: all 200ms linear;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       gap: 4px;
-    }
-
-    .dorpdown-content:before {
-      position: absolute;
-      top: -20px;
-      left: 0;
-      width: 100%;
-      height: 20px;
-      content: '';
-      display: block;
-      z-index: 1;
     }
 
     .dropdown-content-active {
@@ -254,17 +257,20 @@ export default {
     }
     .dorpdown-content:after {
       position: absolute;
-      top: -7px;
-      right: 36px;
-      width: 0px; 
-      height: 0px; 
-      border-left: 8px solid transparent;
-      border-right: 8px solid transparent; 
-      border-bottom: 8px solid var(--color1);
+      top: -80px;
+      right: 24px;
+      width: 40px; 
+      height: 84px; 
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
       content: '';
       display: block;
-      z-index: 2;
+      position: absolute;
       transition: all 200ms linear;
+    }
+
+    .less-radius {
+      border-radius: 0px 0px 4px 4px;
     }
 
     .dorpdown-content button {
@@ -272,6 +278,11 @@ export default {
     width: 100%;
     color: var(--color3);
     padding: 12px;
+    }
+
+    .translate-on-scroll {
+      transform: translateY(0px);
+      transition: all 200ms linear;
     }
 
   }

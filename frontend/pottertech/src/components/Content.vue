@@ -183,8 +183,8 @@
 
         <div class="section-description">
           <div class="section-text-1">seo</div>
-          <div class="section-text-2">Customers being able to easily find your website is the foundation of web popularity and a constant flow of users</div>
-          <div class="section-text-3">To make sure your website gets the best seo and performance scores possible, we use leading coding practices and designing patterns</div>
+          <div class="section-text-2">Customers being able to easily find your website is the foundation of web popularity and a constant flow of users.</div>
+          <div class="section-text-3">To make sure your website gets the best SEO and performance scores possible, we use leading coding practices and designing patterns.</div>
         </div>
 
       </div>
@@ -337,282 +337,280 @@
         </div>
       </div>
     </div>
+    
   </div>
 </template>
 
 <script>
-import BasePageVue from "./BasePage.vue";
-export default {
-  name: "Content",
-  extends: BasePageVue,
-  mounted() {
-    reveal();
-  },
-};
+  import BasePageVue from "./BasePage.vue";
+  export default {
+    name: "Content",
+    extends: BasePageVue,
+    mounted() {
+      reveal();
+    },
+  };
 
-function reveal() {
-  var reveals = document.querySelectorAll(".reveal");
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 30;
-    if (elementTop <= windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
+  function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 30;
+      if (elementTop <= windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      }
     }
   }
-}
 
-window.addEventListener("scroll", reveal);
+  window.addEventListener("scroll", reveal);
 </script>
 
 <style>
-.content {
-  height: 100%;
-  width: 90%;
-  max-width: 1200px;
-  box-sizing: border-box;
-  margin: auto;
-  position: relative;
-  z-index: 1;
-}
+  .content {
+    height: 100%;
+    width: 90%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+  }
 
-.coloured-1 {
-  color: var(--color1);
-}
+  .coloured-1 {
+    color: var(--color1);
+  }
 
-.coloured-4 {
-  color: var(--color4);
-}
+  .coloured-4 {
+    color: var(--color4);
+  }
 
-.title {
-  font-size: 2.5rem;
-  letter-spacing: 2px;
-  line-height: 1.1;
-  margin: 0px;
-}
+  .title {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    line-height: 1.1;
+    margin: 0px;
+  }
 
-.main-text {
-  margin-top: 100px;
-  color: var(--color3);
-  line-height: 1.2;
-  padding: 0px 48px;
-  box-sizing: border-box;
-  width: 48%;
-}
+  .main-text {
+    margin-top: 100px;
+    color: white;
+    line-height: 1.2;
+    padding: 0px 48px;
+    box-sizing: border-box;
+    width: 48%;
+  }
 
-.description {
-  font-size: 1rem;
-  letter-spacing: 2px;
-  margin: 20px 0px;
-}
+  .description {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin: 20px 0px;
+  }
 
-.second-text {
-  margin-top: 96px;
-}
+  .second-text {
+    margin-top: 96px;
+  }
 
-.nav-button {
-  padding: 14px 25px;
-  background-color: var(--color3);
-  border-radius: 50px;
-  box-shadow: 0px 0px 10px var(--color4);
-  border-radius: 50px;
-  font-weight: bold !important;
-  color: var(--color1);
-  transition: all 0.35s linear;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  border: none;
-}
+  .nav-button {
+    padding: 14px 25px;
+    background-color: var(--color3);
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px var(--color4);
+    border-radius: 50px;
+    font-weight: bold !important;
+    color: var(--color1);
+    transition: all 0.35s linear;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border: none;
+  }
 
-.nav-button:hover {
-  transform: scale(1.06, 1.06);
-}
+  .nav-button:hover {
+    transform: scale(1.06, 1.06);
+  }
 
-.services-container {
-  margin: 50px 0px;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  gap: 16px;
-  justify-content: space-between;
-}
+  .services-container {
+    margin: 50px 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+  }
 
-.service-box {
-  width: 33%;
-  display: flex;
-  flex-direction: row;
-  gap: 12px;
-  position: relative;
-  padding: 12px 0px;
-  border-radius: 4px;
-  background-color: white;
-  box-shadow: 0px 6px 10px -4px var(--color1);
-  transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out !important;
-}
+  .service-box {
+    width: 33%;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    position: relative;
+    padding: 12px 0px;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0px 6px 10px -4px var(--color1);
+    transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out !important;
+  }
 
-.service-box:hover {
-  box-shadow: 0px 6px 20px 3px var(--color2);
-  transform: translateY(-4%) !important;
-}
+  .service-box:hover {
+    box-shadow: 0px 6px 20px 3px var(--color2);
+    transform: translateY(-4%) !important;
+  }
 
-.service-title {
-  font-family: "myFontBold";
-  padding: 12px 0px;
-  padding-bottom: 0px;
-  padding-right: 10px;
-  font-weight: bold;
-  color: var(--color1);
-  font-size: 20px;
-  letter-spacing: 1px;
-}
+  .service-title {
+    font-family: "myFontBold";
+    padding: 12px 0px;
+    padding-bottom: 0px;
+    padding-right: 10px;
+    font-weight: bold;
+    color: var(--color1);
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
 
-.service-description {
-  color: var(--color1);
-  padding: 12px 0px;
-  padding-right: 12px;
-  padding-top: 5px;
-  font-weight: bold;
-  text-align: justify;
-  font-size: 15px;
-}
+  .service-description {
+    color: var(--color1);
+    padding: 12px 0px;
+    padding-right: 32px;
+    padding-top: 5px;
+    font-weight: bold;
+    text-align: justify;
+    font-size: 15px;
+  }
 
-.icon {
-  height: 100%;
-  display: flex;
-  margin: 0px 8px;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-}
+  .icon {
+    height: 100%;
+    display: flex;
+    margin: 0px 8px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  }
 
-.icon svg {
-  width: 50px;
-  height: 50px;
-}
+  .icon svg {
+    width: 50px;
+    height: 50px;
+  }
 
-.icon-right {
-  width: 24px;
-  height: 24px;
-  display: block;
-  position: absolute;
-  top: 4px;
-  right: 4px;
-}
+  .icon-right {
+    width: 24px;
+    height: 24px;
+    display: block;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+  }
 
-.reveal {
-  position: relative;
-  transform: translateY(20px);
-  opacity: 0;
-  transition: 1s all ease;
-}
+  .reveal {
+    position: relative;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
 
-.reveal.active {
-  transform: translateY(0);
-  opacity: 1;
-}
+  .reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
 
-.img-section {
-  width: 100%;
-  margin: 64px auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+  .img-section {
+    width: 100%;
+    margin: 64px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
-.section {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  margin-bottom: 64px;
-}
+  .section {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 64px;
+  }
 
-.section-img {
-  width: 33%;
-  display: flex;
-  align-items: center;
-}
+  .section-img {
+    width: 33%;
+    display: flex;
+    align-items: center;
+  }
 
-.section-img svg {
-  width: 100%;
-}
+  .section-img svg {
+    width: 100%;
+  }
 
-.section-description {
-  width: 70%;
-  padding: 0px 60px;
-  border-radius: 4px;
-  background-color: var(--color3);
-  box-shadow: 0px 6px 10px -4px var(--color1);
-  transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
+  .section-description {
+    width: 70%;
+    padding: 36px;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0px 6px 10px -4px var(--color1);
+    transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
 
-.section-description:hover {
-  box-shadow: 0px 6px 20px 3px var(--color2);
-}
+  .section-description:hover {
+    box-shadow: 0px 6px 20px 3px var(--color2);
+  }
 
-.section-text-1 {
-  font-family: "myFontBold";
-  margin-top: 70px;
-  text-transform: uppercase;
-  font-size: 20px;
-  color: var(--color2);
-}
+  .section-text-1 {
+    font-family: "myFontBold";
+    text-transform: uppercase;
+    font-size: 20px;
+    color: var(--color2);
+  }
 
-.section-text-2 {
-  color: var(--color1);
-  margin-top: 20px;
-  font-size: 33px;
-  font-weight: bold;
-}
+  .section-text-2 {
+    color: var(--color1);
+    margin: 24px auto;
+    font-size: 24px;
+    font-weight: bold;
+  }
 
-.section-text-3 {
-  margin-top: 30px;
-  margin-bottom: 35px;
-  font-size: 16px;
-  color: black;
-}
+  .section-text-3 {
+    font-size: 16px;
+    color: black;
+  }
 
-.machine {
-  fill: var(--color1)
-}
+  .machine {
+    fill: var(--color1)
+  }
 
-.medium-shadow, .large-shadow {
-  fill: rgba(0, 0, 0, 0.15); }
+  .medium-shadow, .large-shadow {
+    fill: rgba(0, 0, 0, 0.15); }
 
-.medium-shadow {
-  animation: rotation 3.75s infinite linear;
-  transform-origin: 264.675px 389.447px; 
-}
+  .medium-shadow {
+    animation: rotation 3.75s infinite linear;
+    transform-origin: 264.675px 389.447px; 
+  }
 
-.large-shadow {  
-  animation: counter-rotation 5s infinite linear;
-  transform-origin: 471.37px 183.694px; 
-}
+  .large-shadow {  
+    animation: counter-rotation 5s infinite linear;
+    transform-origin: 471.37px 183.694px; 
+  }
 
-.medium {
-  fill: var(--color2);
-  animation: rotation 3.75s infinite linear;
-  transform-origin: 254.675px 379.447px; 
-}
+  .medium {
+    fill: var(--color2);
+    animation: rotation 3.75s infinite linear;
+    transform-origin: 254.675px 379.447px; 
+  }
 
-.large {
-  animation: counter-rotation 5s infinite linear;
-  transform-origin: 461.37px 173.694px; 
-}
+  .large {
+    animation: counter-rotation 5s infinite linear;
+    transform-origin: 461.37px 173.694px; 
+  }
 
-.machine-writing {
-  color: black;
-}
+  .machine-writing {
+    color: black;
+  }
 
-.machine-large-text {
-  font-size: 80px;
-  font-weight: 700;
-  fill: var(--color2);
-}
+  .machine-large-text {
+    font-size: 80px;
+    font-weight: 700;
+    fill: var(--color2);
+  }
 
-.machine-medium-text {
-  font-size: 50px;
-  font-weight: 800;
-}
+  .machine-medium-text {
+    font-size: 50px;
+    font-weight: 800;
+  }
 
   @keyframes rotation {
     from {transform: rotate(0deg);}
@@ -624,59 +622,88 @@ window.addEventListener("scroll", reveal);
       to   {transform: rotate(0deg);}
   }
 
-@media only screen and (max-width: 900px) {
-  .content {
-    width: 90%;
-    margin: auto;
+  @media only screen and (max-width: 900px) {
+    .section-text-1 {
+      text-align: center;
+    }
+
+    .section-text-2 {
+      font-size: 20px;
+      text-align: justify;
+    }
+
+    .section-text-3 {
+      font-size: 16px;
+      text-align: justify;
+    }
+
+    .section {
+      margin-bottom: unset;
+    }
+
+    .img-section {
+      gap: 24px;
+    }
   }
 
-  .main-text {
-    margin: 48px auto;
-    padding: 0px;
-    width: 100%;
-    text-align: center;
-  }
+  @media only screen and (max-width: 900px) {
+    .content {
+      width: 90%;
+      margin: auto;
+    }
 
-  .second-text {
-    margin-top: 96px;
-  }
+    .main-text {
+      margin: 48px auto;
+      padding: 0px;
+      width: 100%;
+      text-align: center;
+    }
 
-  .services-container {
-    flex-direction: column;
-    margin: 36px auto;
-  }
+    .service-description {
+      padding: 12px;
+    }
 
-  .service-box {
-    width: 100%;
-    flex-direction: column;
-    padding: 12px;
-  }
+    .second-text {
+      margin-top: 96px;
+    }
 
-  .service-title {
-    text-align: center;
-  }
+    .services-container {
+      flex-direction: column;
+      margin: 36px auto;
+    }
 
-  .section {
-    flex-direction: column;
-  }
+    .service-box {
+      width: 100%;
+      flex-direction: column;
+      padding: 12px;
+    }
 
-  .section-2 {
-    flex-direction: column-reverse;
-  }
+    .service-title {
+      text-align: center;
+    }
 
-  .section-img {
-    margin: auto;
-    width: 70%;
-  }
+    .section {
+      flex-direction: column;
+    }
 
-  .section-description {
-    margin: auto;
-    width: 100%;
-  }
+    .section-2 {
+      flex-direction: column-reverse;
+    }
 
-  .img-section {
-    margin-top: 0px;
-  }
+    .section-img {
+      margin: auto;
+      width: 70%;
+    }
 
-}
+    .section-description {
+      margin: auto;
+      width: 100%;
+    }
+
+    .img-section {
+      margin-top: 0px;
+    }
+
+  }
+  
 </style>
